@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+/* resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Poppins", "sans-serif";
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+/* Transition */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* BUTTONS STYLE RULE */
+.btn {
+  cursor: pointer;
+  font-family: "Poppins";
+  font-weight: 400;
+  transition: all 300ms ease;
+  padding: 0.8rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+/* Specific styles for btn-color-1 */
+.btn.btn-color-1 {
+  border: 1px solid black;
+  background: none;
+}
+
+/* Hover styles for btn-color-1 */
+.btn.btn-color-1:hover {
+  background: black;
+  color: white;
+}
+
+/* Specific styles for btn-color-2 */
+.btn.btn-color-2 {
+  border: none;
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+/* Hover styles for btn-color-2 */
+.btn.btn-color-2:hover {
+  background-color: black;
+}
+
+/* HAMBURGER STYLE RULE */
+#navbar {
+  /* Smooth transition to the cross icon */
+  /* Smooth transition back to the hamburger icon */
+}
+#navbar .hamburger-icon {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+#navbar .hamburger-icon .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.56rem;
+}
+#navbar .hamburger-icon .hamburger span {
+  background-color: black;
+  height: 2px;
+  width: 30px;
+}
+#navbar .hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+  transition: transform 0.3s ease-in-out, opacity 2s ease-in-out;
+}
+#navbar .hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+#navbar .hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+  transition: transform 0.3s ease-in-out, opacity 2s ease-in-out;
+}
+#navbar .hamburger-icon:not(.open) span {
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* style rules for dark theme */
+/* light-dark mode icon style */
+#light-dark-mode {
+  height: 1.6rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  border-radius: 50%;
+}
+#light-dark-mode img {
+  height: 1.5rem;
+  cursor: pointer;
+}/*# sourceMappingURL=designSystem.css.map */
