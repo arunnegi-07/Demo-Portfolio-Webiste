@@ -1,0 +1,174 @@
+@import '../designSystem/designSystem.scss';
+
+
+/* MEDIA QUERY FOR NAVBAR AND HERO SECTION */
+
+/* media query for navbar and hero section @desktop screen */
+@media (max-width : $desktop){
+    #navbar .nav-links {
+        // border: 1px solid wheat;
+        background-color: #fff;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        top: 20rem;
+        width: 100%;
+    }
+
+    #navbar .hamburger-icon {
+        display: block;
+    }
+    
+    #navbar .nav-links:not(.hidden){
+        transform: translateY(3vh);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        z-index: 1;
+    }
+
+    .hidden {
+        opacity: 0; 
+        z-index: -1;
+    }
+
+    .visible {
+        opacity: 1;
+        transition: opacity 0.5s ease, transform 0.3s ease-in-out; 
+    }
+
+    #hero .hero-container{
+        flex-direction: column;
+        gap: 1rem; 
+    }
+
+    #hero .hero-container .pic-section img{
+        height: 275px;
+    }
+}
+
+/* media query for navbar and hero section @mobile screen*/
+@media (max-width : $mobile){
+    #navbar .logo{
+        font-size: 1.5rem;
+    }
+
+    #navbar .hamburger-icon .hamburger {
+        gap: 0.5rem;
+    }
+    
+    #navbar .hamburger-icon .hamburger span{
+        width: 26px;
+    }
+
+    #navbar .hamburger-icon.open span:first-child{
+        transform: rotate(45deg) translate(10px, 4px);    
+    }
+
+    #navbar .hamburger-icon.open span:last-child{
+        transform: rotate(-45deg) translate(10px, -4px);   
+    }
+
+    #hero .hero-container .pic-section img {
+        height: 230px;
+    }
+    
+    #hero .hero-content .hero-content--title{
+        font-size: 2rem;
+    } 
+
+    #hero .hero-content .hero-content--text{
+        font-size: 1.5rem;
+    } 
+
+    #hero .hero-content .hero-content--btn button{
+        font-size: 0.78rem;
+        padding: 0.8rem;
+        width: 7rem;
+        border-radius: 2rem;
+    }
+
+    #hero .hero-content .hero-content--social img{
+        height: 28px;
+    } 
+}
+  
+
+/* MEDIA QUERY FOR ABOUT SECTION */
+
+/* media query for about section @desktop screen */
+@media (max-width : $desktop){
+    .about-container{
+        flex-direction: column;
+    }
+
+    #about .about-container .about-pic-container img{
+            height: 275px;
+    } 
+}
+
+/* media query for about section @tablet screen */
+@media (max-width : $tablet){
+    #about{
+        height: 66.7rem;
+    }
+
+    #about .about-container {
+        // border: 1px solid green;
+        height: 54.8rem;
+        gap: 2rem;
+    }
+
+    .about-pic-container{
+        // border: 1px solid red;
+        // margin-top: 6vh;
+    }
+
+    .experience-education{
+        // border: 1px solid black;
+        flex-direction: column; 
+        // height: 50vh;
+        flex: 0;
+        
+    }
+
+    .experience-container, .education-container{
+        width: 100%;   
+    }
+    
+    .about-text-container{
+        // border: 1px solid saddlebrown;
+        margin: auto;
+        width: 100%;
+        text-align: justify;
+    }
+
+    #about .navigation-arrow{
+        display: none;
+    }
+
+}
+
+/* media query for about section @mobile screen */
+@media (max-width : $mobile){
+    #about{
+        // height: 125vh;
+    }
+
+    #about .about-container {
+        // height: 100vh;
+        gap: 2rem;
+    }
+
+    #about .about-heading-container h1{
+        font-size: 2rem;
+    }
+
+    #about .about-container .about-pic-container img{
+        height: 235px;
+    } 
+}
+
+
+/* MEDIA QUERY FOR EXPERIENCE SECTION */
