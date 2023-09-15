@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/mainPage/mainPage.css">
+    <link rel="stylesheet" href="./css/mediaQueries/mediaqueries.css">
+</head>
+<body>
+    <!-- light-dark mode -->
+    <div id="light-dark-mode">
+        <img id="toggleTheme" class="theme-btn" src="./assets/theme_light.png" alt="theme-icon">
+        <!-- <img id="dark-icon" class="toggle-dark-icon" src="./assets/theme_dark.png" alt=""> -->
+    </div>
+
+    <!-- navbar -->
+    <nav id="navbar">
+        <div class="logo">John Doe</div>
+        <div class="nav-links hidden">
+                <li class="nav-link"><a href="#about">About</a></li>
+                <li class="nav-link"><a href="#experience">Experience</a></li>
+                <li class="nav-link"><a href="#projects">Projects</a></li>
+                <li class="nav-link"><a href="#contact">Contact</a></li>
+        </div>
+        <div class="hamburger-icon">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section visible -->
+    <section id="hero">  
+        <div class="hero-container visible">
+            <div class="pic-section">
+                <img src="./assets/profile-pic.png" alt="John Doe Profile Picture">
+            </div>
+            <div class="hero-content">
+                <p class="hero-content--label">Hello, I'm</p>
+                <h1 class="hero-content--title">John Doe</h1>
+                <p class="hero-content--text">Frontend Developer</p>
+                <div class="hero-content--btn">
+                    <button class="btn btn-color-1" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+                    <button class="btn btn-color-2" onclick="location.href='./#contact'">Contact Info</button>
+                </div>
+                <div class="hero-content--social">
+                    <a href="https:/linkedin.com/"><img src="./assets/linkedin_light.png" alt="linkedin-icon"></a>
+                    <a href="https:/github.com/"><img src="./assets/github_light.png" alt="github-icon"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section id="about">
+        <div class="about-heading-container">
+            <p class="about-label">Get To Know More</p>
+            <h1 class="about-title">About Me</h1> 
+        </div>
+        <div class="about-container">
+            <div class="about-pic-container">
+                <img src="./assets/about-pic.png" alt="John Doe Profile Picture">
+            </div>
+            <div class="about-details-container">
+                <div class="experience-education">
+                    <div class="experience-container">
+                        <img src="./assets/experience.png" alt=experience-icon">
+                        <h3>Experience</h3>
+                        <p>2+ years<br>Frontend Developement</p>
+                    </div>
+                    <div class="education-container">
+                        <img src="./assets/education.png" alt=education-icon">
+                        <h3>Education</h3>
+                        <p>B.Sc. Bachelors Degree<br>M.Sc. Masters Degree</p>
+                    </div>
+                </div>
+                <div class="about-text-container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore omnis sapiente hic odio quod voluptates alias nobis excepturi perspiciatis natus voluptatem exercitationem voluptas quibusdam deserunt impedit libero rerum adipisci, quos nisi velit sunt! Quibusdam magni laborum perspiciatis, eaque quos nobis?</p>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-arrow">
+            <img src="./assets/arrow.png" alt="navigation-arrow-icon" onclick="location.href='./#experience'">
+        </div>
+    </section>
+
+    <!-- experience section -->
+    <section id="experience">
+    
+    </section>
+
+    <!-- project section -->
+    <section id="projects">
+        
+    </section>
+
+    <!-- contact me section -->
+    <section id="contact">
+
+    </section>
+    <script src="script.js"></script>
+    <script src="./lightDarkMode.js"></script>
+</body>
+</html>
