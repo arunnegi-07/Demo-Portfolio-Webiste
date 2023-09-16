@@ -119,9 +119,6 @@ a,
   cursor: pointer;
 }
 
-/* Make the elements with class "non-selectable" not selectable */
-.non-selectable {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+.highlight-none {
+  touch-action: manipulation;
 }/*# sourceMappingURL=designSystem.css.map */
