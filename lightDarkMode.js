@@ -23,7 +23,10 @@ document.addEventListener("DOMContentLoaded",(e) => {
     }
 
     toggleThemeButton.addEventListener('click',() => {
-        const isDark = document.body.classList.toggle('dark-theme');
+        const isDark = document.documentElement.classList.toggle('dark-theme');
+        console.log(isDark);
+
+
         localStorage.setItem("isDark",isDark);
 
         setTheme(isDark);
@@ -31,8 +34,10 @@ document.addEventListener("DOMContentLoaded",(e) => {
     
     const loadTheme = () => {
         const isDark = localStorage.getItem("isDark") === "true";
+        console.log(isDark);
 
-        document.body.classList.toggle('dark-theme',isDark);
+        
+        document.documentElement.classList.toggle('dark-theme',isDark);
        
         setTheme(isDark);
     };
