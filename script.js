@@ -4,7 +4,7 @@ const navLinks = document.querySelector('.nav-links');
 const navLinksArray = document.querySelectorAll('.nav-link');
 const heroSection = document.querySelector('#hero');
 let isVisible = true;
-
+ 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     navLinks.classList.toggle('hidden');
@@ -33,17 +33,3 @@ navLinksArray.forEach((navLink) => {
     }
     });
 });
-
-
-// function logScreenResolution() {
-//     const screenWidth = window.screen.width;
-//     const screenHeight = window.screen.height;
-//     console.log(`Screen Resolution: ${screenWidth}x${screenHeight}`);
-//   }
-  
-//   // Call the function to log the initial screen resolution
-//   logScreenResolution();
-  
-//   // Add an event listener for window resize events to log the new resolution
-//   window.addEventListener('resize', logScreenResolution);
-  
