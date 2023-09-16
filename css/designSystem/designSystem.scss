@@ -54,6 +54,7 @@ body,html{
     font-family: $primary-font, $fallback-font;
     background-color: var(--primary-bg-color);
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
     transition: all 0.3s ease;
 }
 
@@ -155,7 +156,7 @@ a,
     }
 }
 
-.highlight-none {
-    -webkit-tap-highlight-color: transparent;
-    tap-highlight-color: transparent;
-}
+// .highlight-none {
+    
+//     // tap-highlight-color: transparent;
+// }
