@@ -10,16 +10,34 @@ $laptop : 1024px;
 $large : 1920px; 
 
 // Light Mode Color Schemes
+
 $primary-bg-color: #ffffff;
 $primary-text-color: #000000;
 $secondary-color: #555555;
 $link-hover-color: #808080;
+
 
 // Dark Mode Color Schemes
 $dark-primary-bg-color: #222222;
 $dark-primary-text-color: #ffffff;
 $dark-secondary-color: #555555;
 $dark-link-hover-color: #b5b5b5;
+
+
+/* Compile SCSS variables into CSS variables */
+:root {
+    --primary-bg-color: #{$primary-bg-color};
+    --primary-text-color: #{$primary-text-color};
+    --secondary-color: #{$secondary-color};
+    --link-hover-color: #{$link-hover-color};
+}
+
+.dark-theme {
+    --primary-bg-color: #{$dark-primary-bg-color};
+    --primary-text-color: #{$dark-primary-text-color};
+    --secondary-color: #{$dark-secondary-color};
+    --link-hover-color: #{$dark-link-hover-color};
+}
 
 // font style
 $primary-font: 'Poppins';
@@ -34,8 +52,9 @@ $fallback-font: 'sans-serif';
 
 body,html{
     font-family: $primary-font, $fallback-font;
+    background-color: var(--primary-bg-color);
     scroll-behavior: smooth;
-    background-color: $primary-bg-color;
+    transition: all 0.3s ease;
 }
 
 /* Transition */
@@ -86,7 +105,7 @@ a,
         display: none;
         font-size: 2.5rem;
         cursor: pointer;
-                
+    
         .hamburger {
             display: flex;
             flex-direction: column;
@@ -94,7 +113,7 @@ a,
             gap: 0.56rem;
 
             span{
-                background-color: black;
+                background-color: var(--primary-text-color);
                 height: 2px;
                 width: 30px;
             }
@@ -122,14 +141,6 @@ a,
     }
 } 
 
-/* style rules for dark theme */
-.dark-theme{
-    $primary-bg-color: $dark-primary-bg-color;
-    $primary-text-color: $dark-primary-text-color;
-    $secondary-color: $dark-secondary-color;
-    $link-hover-color: $dark-link-hover-color;
-}
-
 /* light-dark mode icon style */
 #light-dark-mode{
     height: 1.6rem;
@@ -143,5 +154,11 @@ a,
         cursor: pointer;
     }
 }
+
+/* Make the elements with class "non-selectable" not selectable */
+.non-selectable {
+    user-select: none;
+}
+
 
 
