@@ -10,18 +10,20 @@ $laptop : 1024px;
 $large : 1920px; 
 
 // Light Mode Color Schemes
-
 $primary-bg-color: #ffffff;
 $primary-text-color: #000000;
 $secondary-color: #555555;
 $link-hover-color: #808080;
-
+$icon-background-color: #000000;
+$icon-background-hover-color: #1362d8;
 
 // Dark Mode Color Schemes
-$dark-primary-bg-color: #222222;
-$dark-primary-text-color: #ffffff;
-$dark-secondary-color: #555555;
+$dark-primary-bg-color: #001524;
+$dark-primary-text-color: #f5deb3;
+$dark-secondary-color: #abaaa8;
 $dark-link-hover-color: #b5b5b5;
+$dark-icon-background-color: #abaaa8;
+$dark-icon-background-hover-color: #f5deb3;
 
 
 /* Compile SCSS variables into CSS variables */
@@ -30,6 +32,8 @@ $dark-link-hover-color: #b5b5b5;
     --primary-text-color: #{$primary-text-color};
     --secondary-color: #{$secondary-color};
     --link-hover-color: #{$link-hover-color};
+    --icon-background-color: #{$icon-background-color};
+    --icon-background-hover-color: #{$icon-background-hover-color};
 }
 
 .dark-theme {
@@ -37,6 +41,8 @@ $dark-link-hover-color: #b5b5b5;
     --primary-text-color: #{$dark-primary-text-color};
     --secondary-color: #{$dark-secondary-color};
     --link-hover-color: #{$dark-link-hover-color};
+    --icon-background-color: #{$dark-icon-background-color};
+    --icon-background-hover-color: #{$dark-icon-background-hover-color};
 }
 
 // font style
@@ -54,6 +60,7 @@ body,html{
     font-family: $primary-font, $fallback-font;
     background-color: var(--primary-bg-color);
     scroll-behavior: smooth;
+    user-select: none;
     -webkit-tap-highlight-color: transparent;
     transition: all 0.3s ease;
 }
@@ -67,36 +74,38 @@ a,
 /* BUTTONS STYLE RULE */
 .btn {
     cursor: pointer;
-    font-family: 'Poppins';
+    font-family: $primary-font;
     font-weight: 400;
     transition: all 300ms ease;
     padding: 0.8rem;
     width: 8rem;
     border-radius: 2rem;
+    color: var(--primary-text-color);
 }
 
 /* Specific styles for btn-color-1 */
 .btn.btn-color-1 {
-    border: 1px solid black;
+    border: 1px solid var(--primary-text-color);
     background: none;
 }
 
 /* Hover styles for btn-color-1 */
 .btn.btn-color-1:hover {
-    background: black;
-    color: white;
+    background: var(--primary-text-color);
+    color: var(--primary-bg-color);
 }
 
 /* Specific styles for btn-color-2 */
 .btn.btn-color-2 {
     border: none;
-    background: rgb(53, 53, 53);
-    color: white;
+    background: var(--secondary-color);
+    color: var(--primary-bg-color);
 }
 
 /* Hover styles for btn-color-2 */
 .btn.btn-color-2:hover {
-    background-color: black;
+    background: var(--primary-text-color);
+    color: var(--primary-bg-color);
 }
 
 
@@ -155,8 +164,3 @@ a,
         cursor: pointer;
     }
 }
-
-// .highlight-none {
-    
-//     // tap-highlight-color: transparent;
-// }
