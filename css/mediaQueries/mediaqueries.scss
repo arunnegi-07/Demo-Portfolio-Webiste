@@ -46,6 +46,13 @@
     }
 }
 
+@media (max-width : $tablet){
+    #light-dark-mode{
+        right: 1.2rem;
+        top: 1.2rem;
+    }
+}
+
 /* media query for navbar and hero section @mobile screen*/
 @media (max-width : $mobile){
     #navbar .logo{

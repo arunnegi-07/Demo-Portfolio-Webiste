@@ -120,13 +120,15 @@ a,
 #light-dark-mode {
   height: 1.6rem;
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1.5rem;
+  top: 1.5rem;
   border-radius: 50%;
 }
 #light-dark-mode img {
   height: 1.5rem;
+  border-radius: 50%;
   cursor: pointer;
+  background: var(--secondary-color);
 }
 
 /* style rules for navbar */
