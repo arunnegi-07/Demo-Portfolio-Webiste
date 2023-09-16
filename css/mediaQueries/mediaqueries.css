@@ -123,7 +123,6 @@ a,
   right: 1.5rem;
   top: 1.5rem;
   border-radius: 50%;
-  border: 1px solid wheat;
 }
 #light-dark-mode img {
   height: 1.5rem;
@@ -219,6 +218,9 @@ a,
   }
   #about .about-container .about-pic-container img {
     height: 275px;
+  }
+  .hero-content {
+    margin-top: 5px;
   }
 }
 /* media query for about section @tablet screen */
