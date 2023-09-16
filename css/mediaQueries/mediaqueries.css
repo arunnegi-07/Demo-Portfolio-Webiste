@@ -123,6 +123,7 @@ a,
   right: 1.5rem;
   top: 1.5rem;
   border-radius: 50%;
+  border: 1px solid wheat;
 }
 #light-dark-mode img {
   height: 1.5rem;

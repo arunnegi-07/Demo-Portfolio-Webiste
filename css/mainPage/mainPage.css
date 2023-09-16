@@ -173,8 +173,14 @@ a,
   padding-bottom: 5rem;
   height: 48rem;
 }
+#hero .hero-container .pic-section {
+  display: flex;
+  border-radius: 50%;
+  border: 2px solid var(--primary-text-color);
+}
 #hero .hero-container .pic-section img {
   height: 400px;
+  padding: 5px;
 }
 #hero .hero-container .hero-content {
   display: flex;
