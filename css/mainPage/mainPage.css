@@ -6,13 +6,17 @@
   --primary-text-color: #000000;
   --secondary-color: #555555;
   --link-hover-color: #808080;
+  --icon-background-color: #000000;
+  --icon-background-hover-color: #1362d8;
 }
 
 .dark-theme {
-  --primary-bg-color: #222222;
-  --primary-text-color: #ffffff;
-  --secondary-color: #555555;
+  --primary-bg-color: #001524;
+  --primary-text-color: #f5deb3;
+  --secondary-color: #abaaa8;
   --link-hover-color: #b5b5b5;
+  --icon-background-color: #abaaa8;
+  --icon-background-hover-color: #f5deb3;
 }
 
 /* resets */
@@ -26,6 +30,10 @@ body, html {
   font-family: "Poppins", "sans-serif";
   background-color: var(--primary-bg-color);
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
   transition: all 0.3s ease;
 }
 
@@ -44,30 +52,32 @@ a,
   padding: 0.8rem;
   width: 8rem;
   border-radius: 2rem;
+  color: var(--primary-text-color);
 }
 
 /* Specific styles for btn-color-1 */
 .btn.btn-color-1 {
-  border: 1px solid black;
+  border: 1px solid var(--primary-text-color);
   background: none;
 }
 
 /* Hover styles for btn-color-1 */
 .btn.btn-color-1:hover {
-  background: black;
-  color: white;
+  background: var(--primary-text-color);
+  color: var(--primary-bg-color);
 }
 
 /* Specific styles for btn-color-2 */
 .btn.btn-color-2 {
   border: none;
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--secondary-color);
+  color: var(--primary-bg-color);
 }
 
 /* Hover styles for btn-color-2 */
 .btn.btn-color-2:hover {
-  background-color: black;
+  background: var(--primary-text-color);
+  color: var(--primary-bg-color);
 }
 
 /* HAMBURGER STYLE RULE */
@@ -117,11 +127,6 @@ a,
 #light-dark-mode img {
   height: 1.5rem;
   cursor: pointer;
-}
-
-.highlight-none {
-  -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
 }
 
 /* style rules for navbar */
@@ -178,16 +183,17 @@ a,
 }
 #hero .hero-container .hero-content--label {
   font-weight: 600;
-  color: #555555;
+  color: var(--secondary-color);
 }
 #hero .hero-container .hero-content--title {
   font-weight: 600;
   font-size: 3rem;
+  color: var(--primary-text-color);
 }
 #hero .hero-container .hero-content--text {
   font-weight: 600;
   font-size: 1.75rem;
-  color: #555555;
+  color: var(--secondary-color);
   margin-bottom: 1rem;
 }
 #hero .hero-container .hero-content--btn {
@@ -199,8 +205,13 @@ a,
   gap: 1rem;
   margin-top: 1rem;
 }
-#hero .hero-container .hero-content--social img {
+#hero .hero-container .hero-content--social svg {
   height: 32px;
+  width: 32px;
+  fill: var(--icon-background-color);
+}
+#hero .hero-container .hero-content--social svg:hover {
+  fill: var(--icon-background-hover-color);
 }
 
 /* style rules for about section */
