@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+/* Compile SCSS variables into CSS variables */
+:root {
+  --primary-bg-color: #ffffff;
+  --primary-text-color: #000000;
+  --secondary-color: #555555;
+  --link-hover-color: #808080;
+}
+
+.dark-theme {
+  --primary-bg-color: #222222;
+  --primary-text-color: #ffffff;
+  --secondary-color: #555555;
+  --link-hover-color: #b5b5b5;
+}
+
 /* resets */
 * {
   margin: 0;
@@ -9,8 +24,9 @@
 
 body, html {
   font-family: "Poppins", "sans-serif";
+  background-color: var(--primary-bg-color);
   scroll-behavior: smooth;
-  background-color: #ffffff;
+  transition: all 0.3s ease;
 }
 
 /* Transition */
@@ -71,7 +87,7 @@ a,
   gap: 0.56rem;
 }
 #navbar .hamburger-icon .hamburger span {
-  background-color: black;
+  background-color: var(--primary-text-color);
   height: 2px;
   width: 30px;
 }
@@ -90,7 +106,6 @@ a,
   transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/* style rules for dark theme */
 /* light-dark mode icon style */
 #light-dark-mode {
   height: 1.6rem;
@@ -104,11 +119,17 @@ a,
   cursor: pointer;
 }
 
+/* Make the elements with class "non-selectable" not selectable */
+.non-selectable {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 /* MEDIA QUERY FOR NAVBAR AND HERO SECTION */
 /* media query for navbar and hero section @desktop screen */
 @media (max-width: 1200px) {
   #navbar .nav-links {
-    background-color: #fff;
     position: absolute;
     display: flex;
     flex-direction: column;
