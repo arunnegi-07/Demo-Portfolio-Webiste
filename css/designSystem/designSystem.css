@@ -120,5 +120,6 @@ a,
 }
 
 .highlight-none {
-  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
 }/*# sourceMappingURL=designSystem.css.map */

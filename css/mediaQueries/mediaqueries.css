@@ -120,7 +120,8 @@ a,
 }
 
 .highlight-none {
-  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
 }
 
 /* MEDIA QUERY FOR NAVBAR AND HERO SECTION */
