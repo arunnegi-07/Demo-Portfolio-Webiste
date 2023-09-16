@@ -6,12 +6,13 @@
     // border: 1px solid green;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
     padding: 50px 0;
+    // background-color:;
 
     .logo{
         font-size: 2rem;
-        color: $primary-text-color;
+        color: var(--primary-text-color);
     }
 
     .logo:hover{
@@ -29,7 +30,7 @@
 
             a{
                 text-decoration: none;     
-                color: $primary-text-color;
+                color: var(--primary-text-color);
             }
 
             a:hover{
