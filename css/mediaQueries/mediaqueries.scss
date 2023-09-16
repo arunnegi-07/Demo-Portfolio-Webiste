@@ -6,8 +6,6 @@
 /* media query for navbar and hero section @desktop screen */
 @media (max-width : $desktop){
     #navbar .nav-links {
-        // border: 1px solid wheat;
-        background-color: #fff;
         position: absolute;
         display: flex;
         flex-direction: column;
