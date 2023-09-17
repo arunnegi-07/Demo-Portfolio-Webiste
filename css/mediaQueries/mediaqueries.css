@@ -5,6 +5,7 @@
   --primary-bg-color: #ffffff;
   --primary-text-color: #000000;
   --secondary-color: #555555;
+  --items-border: #a3a3a3 0.12rem solid;
   --link-hover-color: #808080;
   --icon-background-color: #000000;
   --icon-background-hover-color: #1362d8;
@@ -14,6 +15,7 @@
   --primary-bg-color: #001524;
   --primary-text-color: #f5deb3;
   --secondary-color: #abaaa8;
+  --items-border: #c1bdb3 0.1rem solid;
   --link-hover-color: #b5b5b5;
   --icon-background-color: #abaaa8;
   --icon-background-hover-color: #f5deb3;
@@ -213,7 +215,11 @@ a,
 /* MEDIA QUERY FOR ABOUT SECTION */
 /* media query for about section @desktop screen */
 @media (max-width: 1200px) {
+  .about-heading-container {
+    padding-bottom: 3rem;
+  }
   .about-container {
+    height: 41rem !important;
     flex-direction: column;
   }
   #about .about-container .about-pic-container img {
@@ -226,7 +232,7 @@ a,
 /* media query for about section @tablet screen */
 @media (max-width: 768px) {
   #about {
-    height: 66.7rem;
+    height: 70rem;
   }
   #about .about-container {
     height: 54.8rem;
