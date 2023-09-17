@@ -5,6 +5,7 @@
   --primary-bg-color: #ffffff;
   --primary-text-color: #000000;
   --secondary-color: #555555;
+  --items-border: #a3a3a3 0.12rem solid;
   --link-hover-color: #808080;
   --icon-background-color: #000000;
   --icon-background-hover-color: #1362d8;
@@ -14,6 +15,7 @@
   --primary-bg-color: #001524;
   --primary-text-color: #f5deb3;
   --secondary-color: #abaaa8;
+  --items-border: #c1bdb3 0.1rem solid;
   --link-hover-color: #b5b5b5;
   --icon-background-color: #abaaa8;
   --icon-background-hover-color: #f5deb3;
