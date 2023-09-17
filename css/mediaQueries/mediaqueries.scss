@@ -104,7 +104,13 @@
 
 /* media query for about section @desktop screen */
 @media (max-width : $desktop){
+    .about-heading-container{
+        padding-bottom: 3rem;
+    }
+    
     .about-container{
+        // border: 1px solid green;
+        height: 41rem !important;
         flex-direction: column;
     }
 
@@ -115,12 +121,16 @@
     .hero-content{
         margin-top: 1.5rem;
     }
+
+    // #about .navigation-arrow{
+    //     border: 1px solid green;
+    // }
 }
 
 /* media query for about section @tablet screen */
 @media (max-width : $tablet){
     #about{
-        height: 66.7rem;
+        height: 70rem;
     }
 
     #about .about-container {
