@@ -7,8 +7,9 @@
   --secondary-color: #555555;
   --items-border: #a3a3a3 0.12rem solid;
   --link-hover-color: #808080;
+  --nav-icon-background-color: #000000;
+  --nav-icon-background-hover-color: #1362d8;
   --icon-background-color: #000000;
-  --icon-background-hover-color: #1362d8;
 }
 
 .dark-theme {
@@ -17,8 +18,9 @@
   --secondary-color: #abaaa8;
   --items-border: #c1bdb3 0.1rem solid;
   --link-hover-color: #b5b5b5;
+  --nav-icon-background-color: #abaaa8;
+  --nav-icon-background-hover-color: #f5deb3;
   --icon-background-color: #abaaa8;
-  --icon-background-hover-color: #f5deb3;
 }
 
 /* resets */
@@ -120,8 +122,8 @@ a,
 
 /* light-dark mode icon style */
 #light-dark-mode {
+  position: fixed;
   height: 1.6rem;
-  position: absolute;
   right: 1.5rem;
   top: 1.5rem;
   border-radius: 50%;
@@ -218,15 +220,14 @@ a,
 #hero .hero-container .hero-content--social svg {
   height: 32px;
   width: 32px;
-  fill: var(--icon-background-color);
+  fill: var(--nav-icon-background-color);
 }
 #hero .hero-container .hero-content--social svg:hover {
-  fill: var(--icon-background-hover-color);
+  fill: var(--nav-icon-background-hover-color);
 }
 
 /* style rules for about section */
 #about {
-  border: 2px solid red;
   height: 57.7rem;
   align-items: center;
 }
@@ -279,27 +280,32 @@ a,
   border: var(--items-border);
   text-align: center;
 }
-#about .about-container .about-details-container .experience-education .experience-container img, #about .about-container .about-details-container .experience-education .education-container img {
+#about .about-container .about-details-container .experience-education .experience-container svg, #about .about-container .about-details-container .experience-education .education-container svg {
   height: 32px;
+  width: 32px;
+  fill: var(--icon-background-color);
 }
 #about .about-container .about-details-container .experience-education h3 {
   color: var(--primary-text-color);
 }
 #about .about-container .about-details-container .experience-education p {
-  color: #555555;
+  color: var(--secondary-color);
 }
 #about .about-container .about-details-container .about-text-container {
-  color: #555555;
+  color: var(--secondary-color);
 }
 #about .navigation-arrow {
   width: 93%;
   margin: auto;
   display: flex;
   justify-content: flex-end;
+  color: var(--secondary-color);
 }
-#about .navigation-arrow img {
+#about .navigation-arrow svg {
   height: 32px;
+  width: 32px;
   cursor: pointer;
+  fill: var(--icon-background-color);
 }
 
 /* style rules for experience section */
