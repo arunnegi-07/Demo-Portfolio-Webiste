@@ -15,8 +15,9 @@ $primary-text-color: #000000;
 $secondary-color: #555555;
 $items-border:   #a3a3a3 0.12rem solid;
 $link-hover-color: #808080;
+$nav-icon-background-color: #000000;
+$nav-icon-background-hover-color: #1362d8;
 $icon-background-color: #000000;
-$icon-background-hover-color: #1362d8;
 
 // Dark Mode Color Schemes
 $dark-primary-bg-color: #001524;
@@ -24,8 +25,9 @@ $dark-primary-text-color: #f5deb3;
 $dark-secondary-color: #abaaa8;
 $dark-items-border:#c1bdb3 0.1rem solid;
 $dark-link-hover-color: #b5b5b5;
+$dark-nav-icon-background-color: #abaaa8;
+$dark-nav-icon-background-hover-color: #f5deb3;
 $dark-icon-background-color: #abaaa8;
-$dark-icon-background-hover-color: #f5deb3;
 
 
 /* Compile SCSS variables into CSS variables */
@@ -35,8 +37,9 @@ $dark-icon-background-hover-color: #f5deb3;
     --secondary-color: #{$secondary-color};
     --items-border: #{$items-border};
     --link-hover-color: #{$link-hover-color};
+    --nav-icon-background-color: #{$nav-icon-background-color};
+    --nav-icon-background-hover-color: #{$nav-icon-background-hover-color};
     --icon-background-color: #{$icon-background-color};
-    --icon-background-hover-color: #{$icon-background-hover-color};
 }
 
 .dark-theme {
@@ -45,8 +48,9 @@ $dark-icon-background-hover-color: #f5deb3;
     --secondary-color: #{$dark-secondary-color};
     --items-border: #{$dark-items-border};
     --link-hover-color: #{$dark-link-hover-color};
+    --nav-icon-background-color: #{$dark-nav-icon-background-color};
+    --nav-icon-background-hover-color: #{$dark-nav-icon-background-hover-color};
     --icon-background-color: #{$dark-icon-background-color};
-    --icon-background-hover-color: #{$dark-icon-background-hover-color};
 }
 
 // font style
@@ -157,8 +161,9 @@ a,
 
 /* light-dark mode icon style */
 #light-dark-mode{
+    position: fixed;
     height: 1.6rem;
-    position: absolute;
+    // position: absolute;
     right: 1.5rem;
     top: 1.5rem;
     border-radius: 50%;
