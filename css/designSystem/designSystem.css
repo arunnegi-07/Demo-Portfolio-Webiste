@@ -7,8 +7,9 @@
   --secondary-color: #555555;
   --items-border: #a3a3a3 0.12rem solid;
   --link-hover-color: #808080;
+  --nav-icon-background-color: #000000;
+  --nav-icon-background-hover-color: #1362d8;
   --icon-background-color: #000000;
-  --icon-background-hover-color: #1362d8;
 }
 
 .dark-theme {
@@ -17,8 +18,9 @@
   --secondary-color: #abaaa8;
   --items-border: #c1bdb3 0.1rem solid;
   --link-hover-color: #b5b5b5;
+  --nav-icon-background-color: #abaaa8;
+  --nav-icon-background-hover-color: #f5deb3;
   --icon-background-color: #abaaa8;
-  --icon-background-hover-color: #f5deb3;
 }
 
 /* resets */
@@ -120,8 +122,8 @@ a,
 
 /* light-dark mode icon style */
 #light-dark-mode {
+  position: fixed;
   height: 1.6rem;
-  position: absolute;
   right: 1.5rem;
   top: 1.5rem;
   border-radius: 50%;
