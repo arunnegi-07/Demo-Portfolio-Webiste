@@ -105,11 +105,11 @@
                 svg{
                     height: 32px;
                     width: 32px;
-                    fill: var(--icon-background-color);
+                    fill: var(--nav-icon-background-color);
                 }
 
                 svg:hover{
-                    fill: var(--icon-background-hover-color);
+                    fill: var(--nav-icon-background-hover-color);
                 }
             }
         }
@@ -119,7 +119,7 @@
 /* style rules for about section */
 #about{
     // position: relative;
-    border: 2px solid red;
+    // border: 2px solid red;
     height: 57.7rem;
     align-items: center;
     // gap: 5vh;
@@ -180,8 +180,11 @@
                     border: var(--items-border);
                     text-align: center;
 
-                    img{
+                    svg{
                         height: 32px;
+                        width: 32px;
+                        
+                        fill: var(--icon-background-color);
                     }
                 }
 
@@ -190,12 +193,12 @@
                 }
 
                 p{
-                    color: #555555;
+                    color: var(--secondary-color);
                 }
             }
 
             .about-text-container{
-                color: #555555;
+                color: var(--secondary-color);
             }
         }
     }
@@ -207,10 +210,13 @@
         margin: auto;
         display: flex;
         justify-content: flex-end;
+        color: var(--secondary-color);
 
-        img{
+        svg{
             height: 32px;
+            width: 32px;
             cursor: pointer;
+            fill: var(--icon-background-color);
         }
     }
 }
