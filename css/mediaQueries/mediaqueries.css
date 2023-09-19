@@ -65,22 +65,10 @@ a,
   background: none;
 }
 
-/* Hover styles for btn-color-1 */
-.btn.btn-color-1:hover {
-  background: var(--primary-text-color);
-  color: var(--primary-bg-color);
-}
-
 /* Specific styles for btn-color-2 */
 .btn.btn-color-2 {
   border: none;
   background: var(--secondary-color);
-  color: var(--primary-bg-color);
-}
-
-/* Hover styles for btn-color-2 */
-.btn.btn-color-2:hover {
-  background: var(--primary-text-color);
   color: var(--primary-bg-color);
 }
 
@@ -135,10 +123,25 @@ a,
   padding: 15px;
 }
 
-#light-dark-mode:hover {
-  background-color: var(--nav-icon-background-hover-color);
+/*Style rules which are limited for the devices capable of hovering*/
+@media (hover: hover) {
+  #light-dark-mode:hover {
+    background-color: var(--nav-icon-background-hover-color);
+  }
+  /* Hover styles for btn-color-1 */
+  .btn.btn-color-1:hover {
+    background: var(--primary-text-color);
+    color: var(--primary-bg-color);
+  }
+  /* Hover styles for btn-color-2 */
+  .btn.btn-color-2:hover {
+    background: var(--primary-text-color);
+    color: var(--primary-bg-color);
+  }
+  svg:hover {
+    background-color: var(--nav-icon-background-hover-color);
+  }
 }
-
 /* MEDIA QUERY FOR NAVBAR AND HERO SECTION */
 /* media query for navbar and hero section @desktop screen */
 @media (max-width: 1200px) {
