@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded",(e) => {
     }
 
     const darkLogos = {
-        theme: "./assets/theme_dark.svg",
+        theme: "./assets/theme_dark.png",
     }
 
     function setTheme(isDark){
