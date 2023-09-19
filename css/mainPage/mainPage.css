@@ -8,18 +8,18 @@
   --items-border: #a3a3a3 0.12rem solid;
   --link-hover-color: #808080;
   --nav-icon-background-color: #000000;
-  --nav-icon-background-hover-color: #1362d8;
+  --nav-icon-background-hover-color: #e9eced;
   --icon-background-color: #000000;
 }
 
 .dark-theme {
-  --primary-bg-color: #001524;
-  --primary-text-color: #f5deb3;
+  --primary-bg-color: #23272F;
+  --primary-text-color: #F6F7F9;
   --secondary-color: #abaaa8;
-  --items-border: #c1bdb3 0.1rem solid;
+  --items-border: #404756 0.1rem solid;
   --link-hover-color: #b5b5b5;
   --nav-icon-background-color: #abaaa8;
-  --nav-icon-background-hover-color: #f5deb3;
+  --nav-icon-background-hover-color: rgba(240, 242, 243, 0.0745098039);
   --icon-background-color: #abaaa8;
 }
 
@@ -38,7 +38,7 @@ body, html {
      -moz-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: transparent;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 /* Transition */
@@ -122,17 +122,21 @@ a,
 
 /* light-dark mode icon style */
 #light-dark-mode {
+  border-radius: 50%;
   position: fixed;
-  height: 1.6rem;
+  height: 3.5rem;
   right: 1.5rem;
   top: 1.5rem;
-  border-radius: 50%;
 }
 #light-dark-mode img {
-  height: 1.5rem;
-  border-radius: 50%;
+  height: 3.4rem;
   cursor: pointer;
-  background: var(--secondary-color);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+#light-dark-mode:hover {
+  background-color: var(--nav-icon-background-hover-color);
 }
 
 /* style rules for navbar */
@@ -218,12 +222,14 @@ a,
   margin-top: 1rem;
 }
 #hero .hero-container .hero-content--social svg {
-  height: 32px;
-  width: 32px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  padding: 15px;
   fill: var(--nav-icon-background-color);
 }
 #hero .hero-container .hero-content--social svg:hover {
-  fill: var(--nav-icon-background-hover-color);
+  background-color: var(--nav-icon-background-hover-color);
 }
 
 /* style rules for about section */
@@ -275,7 +281,7 @@ a,
 #about .about-container .about-details-container .experience-education .experience-container, #about .about-container .about-details-container .experience-education .education-container {
   padding: 1.5rem;
   flex: 1;
-  background: var(--primary-bg-color);
+  background: transparent;
   border-radius: 2rem;
   border: var(--items-border);
   text-align: center;
