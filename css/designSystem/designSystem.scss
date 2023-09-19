@@ -16,17 +16,17 @@ $secondary-color: #555555;
 $items-border:   #a3a3a3 0.12rem solid;
 $link-hover-color: #808080;
 $nav-icon-background-color: #000000;
-$nav-icon-background-hover-color: #1362d8;
+$nav-icon-background-hover-color: #e9eced;
 $icon-background-color: #000000;
 
 // Dark Mode Color Schemes
-$dark-primary-bg-color: #001524;
-$dark-primary-text-color: #f5deb3;
+$dark-primary-bg-color: #23272F;
+$dark-primary-text-color: #F6F7F9;
 $dark-secondary-color: #abaaa8;
-$dark-items-border:#c1bdb3 0.1rem solid;
+$dark-items-border:#404756  0.1rem solid;
 $dark-link-hover-color: #b5b5b5;
 $dark-nav-icon-background-color: #abaaa8;
-$dark-nav-icon-background-hover-color: #f5deb3;
+$dark-nav-icon-background-hover-color: #f0f2f313;
 $dark-icon-background-color: #abaaa8;
 
 
@@ -70,7 +70,7 @@ body,html{
     scroll-behavior: smooth;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 /* Transition */
@@ -161,17 +161,23 @@ a,
 
 /* light-dark mode icon style */
 #light-dark-mode{
+    // border: 1px solid red;
+    border-radius: 50%;
     position: fixed;
-    height: 1.6rem;
+    height: 3.5rem;
     // position: absolute;
     right: 1.5rem;
     top: 1.5rem;
-    border-radius: 50%;
 
     img{
-        height: 1.5rem;
-        border-radius: 50%;
+        height: 3.4rem;
         cursor: pointer;
-        background: var(--secondary-color);
+        // background: var(--secondary-color);
+        border-radius: 50%;
+        padding: 15px;
     }
+}
+
+#light-dark-mode:hover{
+    background-color: var(--nav-icon-background-hover-color);
 }
