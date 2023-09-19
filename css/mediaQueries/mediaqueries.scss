@@ -1,7 +1,8 @@
 @import '../designSystem/designSystem.scss';
 
-/*Style rules which are limited for the devices capable of hovering*/
+/*Style rules hovering and no-hovering device*/
 @media(hover:hover){
+
     #light-dark-mode:hover{
         background-color: var(--nav-icon-background-hover-color);
     }
@@ -18,9 +19,35 @@
         color: var(--primary-bg-color);
     }
 
-    svg:hover{
-        background-color: var(--nav-icon-background-hover-color);
-    } 
+    .hero-content--social{
+        display: flex;
+        margin-top: 1rem;
+    
+        svg{
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            fill: var(--nav-icon-background-color);
+            padding: 15px;
+        }
+
+        svg:hover{
+            background-color: var(--nav-icon-background-hover-color);
+        }
+    }
+}
+
+@media(hover:none){
+    .hero-content--social{
+        display: flex;
+        margin-top: 1rem;
+        gap: 1rem;
+        
+        svg{
+            height: 32px;
+            width: 32px;
+        }
+    }
 }
 
 
