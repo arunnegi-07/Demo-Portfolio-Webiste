@@ -162,6 +162,7 @@ a,
   .hero-content--social svg {
     height: 32px;
     width: 32px;
+    fill: var(--nav-icon-background-color);
   }
 }
 /* MEDIA QUERY FOR NAVBAR AND HERO SECTION */
