@@ -65,22 +65,10 @@ a,
   background: none;
 }
 
-/* Hover styles for btn-color-1 */
-.btn.btn-color-1:hover {
-  background: var(--primary-text-color);
-  color: var(--primary-bg-color);
-}
-
 /* Specific styles for btn-color-2 */
 .btn.btn-color-2 {
   border: none;
   background: var(--secondary-color);
-  color: var(--primary-bg-color);
-}
-
-/* Hover styles for btn-color-2 */
-.btn.btn-color-2:hover {
-  background: var(--primary-text-color);
   color: var(--primary-bg-color);
 }
 
@@ -133,10 +121,6 @@ a,
   cursor: pointer;
   border-radius: 50%;
   padding: 15px;
-}
-
-#light-dark-mode:hover {
-  background-color: var(--nav-icon-background-hover-color);
 }
 
 /* style rules for navbar */
@@ -227,9 +211,6 @@ a,
   border-radius: 50%;
   padding: 15px;
   fill: var(--nav-icon-background-color);
-}
-#hero .hero-container .hero-content--social svg:hover {
-  background-color: var(--nav-icon-background-hover-color);
 }
 
 /* style rules for about section */
