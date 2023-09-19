@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded",(e) => {
         const isDark = localStorage.getItem("isDark") === "true";
         console.log(isDark);
 
-        
         document.documentElement.classList.toggle('dark-theme',isDark);
        
         setTheme(isDark);
