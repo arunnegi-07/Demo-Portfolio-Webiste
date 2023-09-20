@@ -172,10 +172,6 @@
     .hero-content{
         margin-top: 1.5rem;
     }
-
-    // #about .navigation-arrow{
-    //     border: 1px solid green;
-    // }
 }
 
 /* media query for about section @tablet screen */
@@ -190,17 +186,10 @@
         gap: 2rem;
     }
 
-    .about-pic-container{
-        // border: 1px solid red;
-        // margin-top: 6vh;
-    }
-
     .experience-education{
         // border: 1px solid black;
         flex-direction: column; 
-        // height: 50vh;
         flex: 0;
-        
     }
 
     .experience-container, .education-container{
@@ -222,12 +211,7 @@
 
 /* media query for about section @mobile screen */
 @media (max-width : $mobile){
-    #about{
-        // height: 125vh;
-    }
-
     #about .about-container {
-        // height: 100vh;
         gap: 2rem;
     }
 
