@@ -106,46 +106,128 @@ a,
 
 
 /* HAMBURGER STYLE RULE */
+
+$cubic-bezier: cubic-bezier(0,.76,.58,1);
 #navbar{
     .hamburger-icon {
         display: none;
-        font-size: 2.5rem;
         cursor: pointer;
-    
-        .hamburger {
+
+        .hamburger{ 
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            gap: 0.56rem;
+            gap: 9px;
+            align-items: center;
+            cursor: pointer;
+        
+            .line-1, .line-2, .line-3{
+                    background-color: var(--primary-text-color);
+                    line-height: 14px;
+                    width: 30px;
+                    height: 2px;
+                    border-radius: 3px;
+            }	  
+        
+            .line-1{
+                animation: line1Anim-rev 0.5s $cubic-bezier !important;
+            }
+            .line-2{
+                animation: line2Anim-rev 0.5s $cubic-bezier !important;
+            }
+            .line-3{
+                animation: line3Anim-rev 0.5s $cubic-bezier !important;
+            }
+            
+            &.active{
+                .line-1{
+                    animation: line1Anim 0.5s $cubic-bezier forwards !important;
+                }
+                .line-2{
+                    animation: line2Anim 0.5s $cubic-bezier forwards !important;
+                }
+                .line-3{
+                    animation: line3Anim 0.5s $cubic-bezier forwards !important;
+                }
+            }
 
-            span{
-                background-color: var(--primary-text-color);
-                height: 2px;
-                width: 30px;
+            // class to remove initial animation
+            .no-animation {
+                animation: none !important; 
             }
         }
-    }
+    } 
+}
 
-    /* Smooth transition to the cross icon */
-    .hamburger-icon.open span:first-child{
-        transform: rotate(45deg) translate(10px, 5px);
-        transition: transform 0.3s ease-in-out, opacity 2s ease-in-out;     
-    }
-    
-    .hamburger-icon.open span:nth-child(2){
-        opacity: 0;
-    }
-    
-    .hamburger-icon.open span:last-child{
-        transform: rotate(-45deg) translate(10px, -5px);
-        transition: transform 0.3s ease-in-out, opacity 2s ease-in-out;     
-    }
-    
-    /* Smooth transition back to the hamburger icon */
-    .hamburger-icon:not(.open) span {
-        transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
-    }
-} 
+@keyframes line1Anim{
+0% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(11px);
+}
+100% {
+transform: translateY(11px) rotate(45deg);
+}
+}
+@keyframes line2Anim{
+0%{
+        transform: scale(1);
+        opacity: 1;	
+}
+100%{
+        transform: scale(0);
+        opacity: 0;	
+}
+}
+@keyframes line3Anim{
+0% {
+transform: translateY(0) rotate(0deg);
+}
+50% {
+transform: translateY(-11px) rotate(0deg);
+}
+100% {
+transform: translateY(-11px) rotate(135deg);
+}
+}
+
+@keyframes line1Anim-rev{
+0% {
+transform: translate3d(0, 12px, 0) rotate(45deg);
+}
+50% {
+transform: translate3d(0, 12px, 0) rotate(0deg);
+}
+100% {
+transform: translate3d(0, 0, 0) rotate(0deg);
+}
+}
+@keyframes line2Anim-rev{
+0%{
+        transform: scale(0);
+        opacity: 0;	
+}
+50%{
+        transform: scale(0);
+        opacity: 0;	
+}
+100%{
+        transform: scale(1);
+        opacity: 1;	
+}
+}
+@keyframes line3Anim-rev{
+0% {
+transform: translateY(-12px) rotate(135deg);
+}
+50% {
+transform: translateY(-12px) rotate(0deg);
+}
+100% {
+transform: translateY(0px);
+}
+}
+
 
 /* light-dark mode icon style */
 #light-dark-mode{
