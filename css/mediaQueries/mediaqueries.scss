@@ -111,20 +111,20 @@
     }
 
     #navbar .hamburger-icon .hamburger {
-        gap: 0.5rem;
+        gap: 9px;
     }
     
     #navbar .hamburger-icon .hamburger span{
         width: 26px;
     }
 
-    #navbar .hamburger-icon.open span:first-child{
-        transform: rotate(45deg) translate(10px, 4px);    
-    }
+    // #navbar .hamburger-icon.open span:first-child{
+    //     transform: rotate(45deg) translate(10px, 4px);    
+    // }
 
-    #navbar .hamburger-icon.open span:last-child{
-        transform: rotate(-45deg) translate(10px, -4px);   
-    }
+    // #navbar .hamburger-icon.open span:last-child{
+    //     transform: rotate(-45deg) translate(10px, -4px);   
+    // }
 
     #hero .hero-container .pic-section img {
         height: 230px;
